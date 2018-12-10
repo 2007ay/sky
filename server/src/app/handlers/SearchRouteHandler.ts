@@ -36,14 +36,14 @@ export class SearchRouteHandler {
 
   async poll(location: any) {
     await this.throttle();
-    console.log('Polling results..');
     try {
+      console.log('Polling results..');
       const response = await fetch(`${location}?apikey=${this.apiKey}`);
-      // if (response.status === this.STATUS_CODES.NOT_MODIFIED) {
-      //   return this.cache;
-      // }
+      if (response.status === this.STATUS_CODES.NOT_MODIFIED) {
+        return this.cache;
+      }
       const body = await response.json();
-      // this.cache = body;
+      this.cache = body;
       return body;
     } catch (err) {
       throw err;
@@ -53,11 +53,10 @@ export class SearchRouteHandler {
   async getResults(location: any): Promise<any> {
     try {
       const response = await this.poll(location);
-      return response;
-      // if (response.Status && response.Status === 'UpdatesComplete') {
-      //   return response;
-      // }
-      // return await this.getResults(location);
+      if (response.Status && response.Status === 'UpdatesComplete') {
+        return response;
+      }
+      return await this.getResults(location);
     } catch (err) {
       throw err;
     }
