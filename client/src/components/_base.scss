@@ -1,0 +1,19 @@
+$primary-bg-color: #f3f2f5;
+$secondary-txt-color:#898294;
+$primary-txt-color:rgb(0, 178, 214);
+$green :rgb(0, 215, 117);
+$red: red;
+
+
+$screen-xs:                    412px;
+$screen-sm:                    768px;
+$screen-sm-max:                $screen-sm - 1;
+$screen-xs-max:                $screen-sm - 1;
+$screen-md:                    992px;
+$screen-md-plus:               $screen-md + 1;
+$screen-md-minus:              $screen-md - 1;
+$screen-mdd:				           1200px;
+$screen-mdd-plus:              $screen-mdd + 1;
+$screen-mdd-minus:             $screen-mdd - 1;
+$screen-lg:                    1440px;
+$screen-lg-plus:               $screen-lg + 1;

@@ -1,0 +1,26 @@
+@import '~bpk-mixins';
+@import './_base.scss';
+
+html,
+body {
+  background-color: $primary-bg-color;
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    &__main {
+      padding-left: 15% !important;
+      padding-right: 15% !important;
+    }
+  }
+}
+
+.App {
+
+  background-color: $primary-bg-color;
+
+  &__main {
+    padding: $bpk-spacing-sm;
+  }
+
+}

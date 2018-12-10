@@ -1,0 +1,14 @@
+{
+  "system": {
+    "version": "0.0.1"
+  },
+  "skyscanner": {
+    "apiKey": "ss630745725358065467897349852985",
+    "skyscannerApi": "http://partners.api.skyscanner.net"
+  },
+  "server": {
+    "port": "4000",
+    "apiroot": "/api",
+    "clientroot": "/client/"
+  }
+}

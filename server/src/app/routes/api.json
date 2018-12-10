@@ -1,0 +1,8 @@
+{
+  "posts": [{
+    "method": "post",
+    "url": "/search",
+    "params": {},
+    "result": "will return all the matched flights"
+  }]
+}

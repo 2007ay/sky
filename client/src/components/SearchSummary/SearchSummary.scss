@@ -1,0 +1,39 @@
+@import '~bpk-mixins';
+@import '../base.scss';
+
+.SearchSummary {
+  padding: $bpk-spacing-sm;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-txt-color;
+  color: $bpk-color-white;
+  text-align: left;
+
+  p {
+    display: inline-block;
+  }
+  
+  svg {
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-bottom: .25em;
+  }
+  
+  &_source,
+  &_destination {    
+    font-size: 2.75rem;
+    line-height: 1em;
+  }
+
+  &_info {
+    display: block !important;
+    margin: 0;
+    margin-top: 4px;
+    font-size: 1.1rem;
+  }
+
+  &_arrow-right {
+    fill: $bpk-color-white;
+  }
+
+}

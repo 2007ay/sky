@@ -1,0 +1,58 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "server-prep-prod": "node ./build/clear.js && tsc",
+    "server-local": "cross-env NODE_ENV=development && tsc && node ./build/taskRunner.js && cd dist && nodemon app/app.js",
+    "prep-prod": "npm run server-prep-prod && cd ../client && npm run build  && cd .. && cd server && node ./build/taskRunner.js",
+    "test": "tsc && node ./node_modules/mocha/bin/mocha"
+  },
+  "author": "Ashish Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "@types/underscore": "^1.8.9",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "config": "^2.0.2",
+    "copy-dir": "^0.4.0",
+    "cross-env": "^5.2.0",
+    "directory-tree": "^2.1.0",
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "node-fetch": "^2.3.0",
+    "path": "^0.12.7",
+    "q": "^1.5.1",
+    "querystring": "^0.2.0",
+    "read-file": "^0.2.0",
+    "underscore": "^1.9.1",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/compression": "0.0.36",
+    "@types/config": "0.0.34",
+    "@types/express-busboy": "^6.0.0",
+    "@types/node": "^9.6.32",
+    "@types/q": "^1.5.1",
+    "@types/request-promise": "^3.0.32",
+    "@types/winston": "^2.4.4",
+    "autoprefixer": "^9.1.3",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "expect": "^23.6.0",
+    "mocha": "^5.2.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "postcss-custom-properties": "^7.0.0",
+    "postcss-import": "^12.0.0",
+    "supertest": "^3.3.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  }
+}

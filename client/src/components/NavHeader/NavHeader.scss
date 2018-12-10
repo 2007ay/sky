@@ -1,0 +1,36 @@
+@import '~bpk-mixins';
+@import '../base.scss';
+
+.NavHeader {
+  display: flex;
+  padding: $bpk-spacing-sm 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bpk-color-white;
+
+  @include bpk-box-shadow-sm;
+
+  &__hidden-text {
+    @include bpk-visually-hidden;
+  }
+
+  span {
+    color: $primary-txt-color;
+    display: inline-block;
+    padding: 0 $bpk-spacing-sm;
+  }
+
+  &_price-alerts {
+    fill: $primary-txt-color;
+    top: 5px;
+    position: relative;
+  }
+
+}
+
+
+@media screen and (min-width: 768px) {
+  .NavHeader {
+    padding: $bpk-spacing-sm 15%;
+  }
+}
