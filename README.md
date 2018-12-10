@@ -11,7 +11,7 @@
 - `npm run prep-prod` 
 
 ## How to  run application
-- http://localhost:4200
+- http://localhost:4000
 - `queryParams`  app-util.js  can be used to modifiy search
 
 
