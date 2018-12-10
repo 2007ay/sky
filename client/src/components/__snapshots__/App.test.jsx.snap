@@ -5,17 +5,12 @@ exports[`App should render correctly 1`] = `
   className="App"
 >
   <Header />
+  <SearchSummary />
+  <NavHeader />
   <main
     className="App__main"
   >
-    <BpkText
-      bold={false}
-      className={null}
-      tagName="p"
-      textStyle="base"
-    >
-      Over to you...
-    </BpkText>
+    <ItineraryList />
   </main>
 </div>
 `;
